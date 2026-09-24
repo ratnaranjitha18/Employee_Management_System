@@ -162,7 +162,7 @@ def register_page():
 # 4. REGISTER USER - POST
 # =========================================
 
-@app.route("/register", methods=["POST"])
+@app.route("/register", methods=["GETt","POST"])
 def register():
 
     fullname = request.form.get(
