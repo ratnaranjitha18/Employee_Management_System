@@ -8,6 +8,9 @@ from werkzeug.security import generate_password_hash, check_password_hash
 # =========================================
 
 app = Flask(__name__, template_folder='.')
+app.secret_key = "employee-management-secret-key"
+impoet os
+create_database()
 
 app.secret_key = "employee-management-secret-key"
 
@@ -869,5 +872,7 @@ if __name__ == "__main__":
     create_database()
 
     app.run(
+        host='0.0.0.0',
+        port=int(os.environ.get("PORT",5000)),
         debug=True
     )
