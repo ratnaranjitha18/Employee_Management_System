@@ -7,7 +7,7 @@ import os
 # FLASK APPLICATION
 # =========================================
 
-app = Flask(_ _name_ _, template_folder='.')
+app = Flask(__name__)
 app.secret_key = "employee-management-secret-key"
 
 # =========================================
