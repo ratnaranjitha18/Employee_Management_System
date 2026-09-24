@@ -33,10 +33,10 @@ def get_database_connection():
 # =========================================
 
 def create_database():
-
     connection = sqlite3.connect("users.db")
 
     cursor = connection.cursor()
+    cursor = execute("DROP TABLE IF EXISTS users")
 
     # =====================================
     # USERS TABLE
@@ -54,7 +54,7 @@ def create_database():
     # =====================================
     # EMPLOYEES TABLE
     # =====================================
-
+    cursor.execute("DROP TABLE IF EXISTS employees")
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS employees (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -72,6 +72,7 @@ def create_database():
 
     connection.close()
 
+    create_database()
     print("=================================")
     print("Database ready")
     print("=================================")
