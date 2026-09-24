@@ -7,7 +7,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 # FLASK APPLICATION
 # =========================================
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
 
 app.secret_key = "employee-management-secret-key"
 
