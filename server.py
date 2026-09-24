@@ -31,7 +31,7 @@ def create_database():
     connection = sqlite3.connect("users.db")
 
     cursor = connection.cursor()
-    cursor = execute("DROP TABLE IF EXISTS users")
+    cursor.execute("DROP TABLE IF EXISTS users")
 
     # =====================================
     # USERS TABLE
