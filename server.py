@@ -1,19 +1,14 @@
 from flask import Flask, request, redirect, render_template, make_response, session
 import sqlite3
 from werkzeug.security import generate_password_hash, check_password_hash
-
+import os
 
 # =========================================
 # FLASK APPLICATION
 # =========================================
 
-app = Flask(__name__, template_folder='.')
+app = Flask(_ _name_ _, template_folder='.')
 app.secret_key = "employee-management-secret-key"
-impoet os
-create_database()
-
-app.secret_key = "employee-management-secret-key"
-
 
 # =========================================
 # DATABASE CONNECTION
